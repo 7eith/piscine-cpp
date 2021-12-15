@@ -6,7 +6,7 @@
 #    By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/15 18:18:12 by amonteli          #+#    #+#              #
-#    Updated: 2021/12/15 18:23:36 by amonteli         ###   ########lyon.fr    #
+#    Updated: 2021/12/15 18:47:40 by amonteli         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,14 +14,13 @@ NAME			=		megaphone
 
 CC				=		@clang++
 
-CFLAGS			=		-Wall -Wextra -Werror
+CFLAGS			=		-Wall -Wextra -Werror -std=c++98
 
 SRCS			=		megaphone.cpp
 
 OBJS			=		$(SRCS:.cpp=.o)
 
 all				:		$(NAME)
-
 
 $(NAME)		: $(OBJS)
 		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
