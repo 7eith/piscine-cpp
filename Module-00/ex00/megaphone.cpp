@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/11 15:45:07 by amonteli          #+#    #+#             */
-/*   Updated: 2021/12/11 20:28:33 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2021/12/15 18:23:53 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	main(int argc, char **args)
 	while (args[index])
 	{
 		std::string str = args[index];
-		for (int i = 0; i < str.length(); i++)
+		for (std::string::size_type i = 0; i < str.length(); i++)
 		{
 			if (str[i] >= 'a' && str[i] <= 'z')
 				str[i] -= 32;

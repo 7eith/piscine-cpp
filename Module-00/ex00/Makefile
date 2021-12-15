@@ -1,57 +1,43 @@
-Hello, j'ai tout ca a vendre, le stock peut s'update, 20e la win avec refund (preuve a l'appuie necessaire)
-```
-YEEZY SLIDE OCHRE    UK 6    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 7    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 8    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 7    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 8    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 9    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 9    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 8    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 10    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 12    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 9    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 6    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 11    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 6    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 7    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 9    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 11    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 10    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 8    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 8    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 8    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 6    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 11    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 10    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 11    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 10    adidas Flagship Store Paris
-YEEZY SLIDE PURE    UK 6    adidas Flagship Store Paris
-YEEZY SLIDE PURE    UK 7    adidas Flagship Store Paris
-YEEZY SLIDE PURE    UK 8    adidas Flagship Store Paris
-YEEZY SLIDE PURE    UK 10    adidas Flagship Store Paris
-YEEZY SLIDE PURE    UK 12    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 9    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 6    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 10    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 7    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 7    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 9    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 11    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 8    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 11    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 10    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 9    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 11    adidas Flagship Store Paris
-YEEZY SLIDE OCHRE    UK 7    adidas Flagship Store Paris
-YEEZY SLIDE PURE    UK 4    adidas Flagship Store Paris
-YEEZY SLIDE PURE    UK 8    adidas Flagship Store Paris
-YEEZY SLIDE PURE    UK 9    adidas Flagship Store Paris
-YEEZY SLIDE PURE    UK 7    adidas Flagship Store Paris
-YEEZY SLIDE PURE    UK 5    adidas Flagship Store Paris
-YEEZY SLIDE PURE    UK 6    adidas Flagship Store Paris
-YEEZY SLIDE PURE    UK 10    adidas Flagship Store Paris
-YEEZY SLIDE PURE    UK 9    adidas Flagship Store Paris
-YEEZY SLIDE PURE    UK 13    adidas Flagship Store Paris
-YEEZY SLIDE PURE    UK 7    adidas Flagship Store Paris
-```
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/12/15 18:18:12 by amonteli          #+#    #+#              #
+#    Updated: 2021/12/15 18:23:36 by amonteli         ###   ########lyon.fr    #
+#                                                                              #
+# **************************************************************************** #
+
+NAME			=		megaphone
+
+CC				=		@clang++
+
+CFLAGS			=		-Wall -Wextra -Werror
+
+SRCS			=		megaphone.cpp
+
+OBJS			=		$(SRCS:.cpp=.o)
+
+all				:		$(NAME)
+
+
+$(NAME)		: $(OBJS)
+		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+		@echo "\033[34m[$(NAME)] Compiled! \033[0m"
+
+%.o: %.cpp
+		$(CC) $(CFLAGS) -c $< -o $@
+
+clean		:
+		@/bin/rm -f $(OBJS)
+		@echo "\033[90m[\033[91m$(NAME)\033[90m]\033[31m Cleaned up objects. \033[0m"
+
+fclean		:		clean
+		@/bin/rm -f $(NAME)
+		@echo "\033[90m[\033[91m$(NAME)\033[90m]\033[31m Deleted executable. \033[0m"
+
+re			:		fclean all
+
+.PHONY: all bonus clean fclean re
