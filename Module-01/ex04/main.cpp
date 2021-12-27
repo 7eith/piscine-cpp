@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/20 17:35:58 by amonteli          #+#    #+#             */
-/*   Updated: 2021/12/20 20:32:40 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2021/12/27 14:57:59 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ int		main(int args_count, char **args)
 	std::string line;
 
 	std::string fileContent;
-	std::string newFileContent = "";
 
 	file.open(fileName);
 	if (file.is_open())
@@ -58,16 +57,23 @@ int		main(int args_count, char **args)
 	std::size_t findPosition = 0;
 	std::size_t stringPos = 0;
 
+	std::string newFileContent;
 	while ((findPosition = fileContent.find(from, stringPos)) != std::string::npos)
 	{
 		newFileContent.append(fileContent, stringPos, (findPosition - stringPos));
 		newFileContent.append(to);
 		stringPos = findPosition + from.size();
 	}
-	newFileContent.append(fileContent);
-	// newFileContent.append(fileContent);
-	// newFileContent.append(fileContent.at(pos));
-	std::cout << newFileContent;
+	newFileContent.append(fileContent, stringPos);
+
+	file.close();
+	std::ofstream newFile;
+
+	newFile.open(fileName.append(".replace"));
+	if (newFile.is_open())
+	{
+		newFile << newFileContent;
+		newFile.close();
+	}
 	return (0);
 }
-// qwertyuiop
