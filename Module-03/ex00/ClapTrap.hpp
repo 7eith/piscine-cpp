@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 20:14:26 by amonteli          #+#    #+#             */
-/*   Updated: 2022/01/06 22:18:29 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2022/02/01 14:49:39 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define CLAPTRAP_HPP
 
 #include "iostream"
+#include "string"
 
 class ClapTrap 
 {
