@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 01:17:10 by amonteli          #+#    #+#             */
-/*   Updated: 2022/01/07 01:18:29 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2022/01/31 16:44:55 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class FragTrap : public ClapTrap
 			~FragTrap(void);
 
 			FragTrap	&operator=(FragTrap const &copy);
+			void		attack(std::string const &target);
 			void		highFivesGuys(void);
 
 };
