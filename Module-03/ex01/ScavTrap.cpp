@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 21:56:40 by amonteli          #+#    #+#             */
-/*   Updated: 2022/01/06 22:19:58 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2022/02/01 15:03:55 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ ScavTrap::ScavTrap(void) : ClapTrap("default")
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
 	this->_hitPoints = 100;
-		this->_energyPoints = 50;
+	this->_energyPoints = 50;
 	this->_attackDamage = 20;
 	std::cout << "[ScavTrap] Constructor Called with name: " << name << std::endl;
 }
