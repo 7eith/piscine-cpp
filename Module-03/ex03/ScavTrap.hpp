@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 21:57:17 by amonteli          #+#    #+#             */
-/*   Updated: 2022/01/07 01:42:28 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2022/02/01 15:05:25 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class ScavTrap : virtual public ClapTrap
 
 			ScavTrap	&operator=(ScavTrap const &copy);
 			void		attack(std::string const &target);
-			void		guardGate(void) const;
+			void		guardGate(void);
 
 };
 

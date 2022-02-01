@@ -6,7 +6,7 @@
 #    By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/27 17:30:03 by amonteli          #+#    #+#              #
-#    Updated: 2022/01/07 01:22:08 by amonteli         ###   ########lyon.fr    #
+#    Updated: 2022/01/31 15:52:29 by amonteli         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME			=		ex03
 
 CC				=		@clang++
 
-CFLAGS			=		-Wall -Wextra -Werror
+CFLAGS			=		-Wall -Wextra -Werror -std=c++98
 
 SRCS			=		main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp DiamondTrap.cpp
 
