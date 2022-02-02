@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 15:34:57 by amonteli          #+#    #+#             */
-/*   Updated: 2022/02/01 15:49:30 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2022/02/02 13:39:31 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ Cat::~Cat(void)
 
 Cat &Cat::operator=(Cat const &copy)
 {
+	std::cout << "Operator = of Cat" << std::endl;
 	this->_type = copy._type;
 	return (*this);
 }

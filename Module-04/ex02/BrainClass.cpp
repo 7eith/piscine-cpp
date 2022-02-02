@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 12:28:38 by amonteli          #+#    #+#             */
-/*   Updated: 2022/02/02 12:48:14 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2022/02/02 13:38:22 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ Brain::Brain(Brain const &copy)
 
 Brain	&Brain::operator=(Brain const &copy)
 {
+	std::cout << "Operator = of Brain" << std::endl;
 	for (int index = 0; index < 100; index++)
 		this->_ideas[index] = copy._ideas[index];
 	return (*this);

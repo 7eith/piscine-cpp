@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 15:34:57 by amonteli          #+#    #+#             */
-/*   Updated: 2022/02/02 12:43:07 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2022/02/02 13:42:04 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 Cat::Cat() : Animal()
 {
 	this->_type = "Cat";
-	this->_brain = new Brain();
 	std::cout << "[Animal] Creating Cat using Default Type" << std::endl;
+	this->_brain = new Brain();
 }
 
 Cat::Cat(Cat const &copy)
@@ -33,8 +33,8 @@ Cat::Cat(Cat const &copy)
 
 Cat::~Cat(void)
 {
-	delete this->_brain;
 	std::cout << "[Animal] Destructing Cat" << std::endl;
+	delete this->_brain;
 }
 
 Cat &Cat::operator=(Cat const &copy)

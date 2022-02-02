@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 04:13:52 by amonteli          #+#    #+#             */
-/*   Updated: 2022/02/01 15:47:36 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2022/02/02 13:41:07 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Animal::Animal(void): _type("default")
 
 Animal::Animal(Animal const &copy)
 {
-	std::cout << "[Animal] Creating Animal using Copy and " << this->_type << " as Type" << std::endl;
+	std::cout << "[Animal] Creating Animal using Copy" << std::endl;
 	*this = copy;
 }
 
@@ -30,6 +30,7 @@ Animal::~Animal(void)
 
 Animal &Animal::operator=(Animal const &copy)
 {
+	std::cout << "Operator = of Animal" << std::endl;
 	this->_type = copy._type;
 	return (*this);
 }

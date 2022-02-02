@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 15:42:03 by amonteli          #+#    #+#             */
-/*   Updated: 2022/02/01 15:49:41 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2022/02/02 13:39:40 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ Dog::~Dog(void)
 
 Dog &Dog::operator=(Dog const &copy)
 {
+	std::cout << "Operator = of Dog" << std::endl;
 	this->_type = copy._type;
 	return (*this);
 }
