@@ -6,7 +6,7 @@
 /*   By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/09 04:13:52 by amonteli          #+#    #+#             */
-/*   Updated: 2022/02/02 13:38:32 by amonteli         ###   ########lyon.fr   */
+/*   Updated: 2022/02/02 13:48:09 by amonteli         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ WrongAnimal::WrongAnimal(void): _type("default")
 
 void			WrongAnimal::makeSound(void) const
 {
-	std::cout << "[Animal] WrongAnimal makeSound!";
+	std::cout << "[Animal] WrongAnimal makeSound!" << std::endl;
 }
 
 WrongAnimal::~WrongAnimal(void)
