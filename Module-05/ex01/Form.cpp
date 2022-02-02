@@ -1,0 +1,80 @@
+#include "Form.hpp"
+
+Form::Form(std::string name, int Gsign, int Gexec) : _name(name), _Gsign(Gsign), _Gexec(Gexec)
+{
+	_sign = 0;
+	if (this->_Gsign < 1 || this->_Gexec < 1)
+		throw Form::GradeTooHighException();
+	if (this->_Gsign > 150 || this->_Gexec > 150)
+		throw Form::GradeTooLowException();
+	return ;
+}
+
+Form::Form() : _name("Default"), _Gsign(0), _Gexec(0)
+{
+	return ;
+}
+
+Form::~Form()
+{
+	return ;
+}
+
+std::string	Form::getName() const
+{
+	return (this->_name);
+}
+
+int Form::getGsign() const
+{
+	return (this->_Gsign);
+}
+
+int Form::getGexec() const
+{
+	return (this->_Gexec);
+}
+
+int Form::getSign() const
+{
+	return (this->_sign);
+}
+
+
+std::ostream	&operator<<(std::ostream &o, Form &Cls)
+{
+	o << "Le Form " << Cls.getName() << " peut être signé par un bureaucrate de grade " << Cls.getGsign();
+	o << " minimum, il peut être executé par un bureaucrate de grade " << Cls.getGexec() << " minimum.";
+	if (Cls.getSign() == 0)
+		o << " Actuellement, le Form n'est pas signé." << std::endl;
+	else
+		o << " Actuellement, le Form est signé." << std::endl;
+	return (o);
+}
+
+const char *Form::GradeTooHighException::what() const throw()
+{
+	return ("Grade Form too high !");
+}
+
+const char *Form::GradeTooLowException::what() const throw()
+{
+	return ("Grade Form too low !");
+}
+
+Form	&Form::beSigned(Bureaucrat &b)
+{
+	if (this->getGsign() < b.getGrade())
+	{
+		b.SignForm(*this);
+		throw Form::GradeTooLowException();
+	}
+	else
+	{
+		this->_sign = 1;
+		b.SignForm(*this);
+		return (*this);
+	}
+	return (*this);
+}
+
