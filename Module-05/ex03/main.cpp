@@ -23,7 +23,7 @@ int main()
 		Bureaucrat Btest2("Lord Zord", 2);
 		Intern test2;
 		Form *Ftest2;
-		Ftest2 = test2.makeForm("bizarre", "this fail");
+		Ftest2 = test2.makeForm("fail", "this fail :)");
 		Ftest2->beSigned(Btest2);
 		Btest2.executeForm(*Ftest2);
 		delete Ftest2;
