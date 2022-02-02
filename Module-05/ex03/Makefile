@@ -6,7 +6,7 @@
 #    By: amonteli <amonteli@student.42lyon.fr>      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/27 17:30:03 by amonteli          #+#    #+#              #
-#    Updated: 2022/02/02 16:48:23 by amonteli         ###   ########lyon.fr    #
+#    Updated: 2022/02/02 16:55:15 by amonteli         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,8 @@ NAME			=		Intern
 
 CC				=		@clang++
 
-CFLAGS			=		-Wall -Wextra -Werror
-
+CFLAGS			=		-Wall -Wextra -Werror -std=c++98
+ 
 SRCS			=		main.cpp Bureaucrat.cpp Form.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp
 
 HEADERS			=		Bureaucrat.hpp Form.hpp PresidentialPardonForm.hpp RobotomyRequestForm.hpp ShrubberyCreationForm.hpp Intern.hpp
